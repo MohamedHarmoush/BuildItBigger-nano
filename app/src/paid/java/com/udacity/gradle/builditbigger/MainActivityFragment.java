@@ -17,12 +17,12 @@ import com.example.harmoush.androidlibrary.AndroidLibraryActivity;
 public class MainActivityFragment extends Fragment {
 
     Button mJokeButton;
-    Joker mJoker;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
-        mJoker = new Joker();
+
         mJokeButton = root.findViewById(R.id.btn_joke);
         mJokeButton.setOnClickListener(new View.OnClickListener() {
             @Override

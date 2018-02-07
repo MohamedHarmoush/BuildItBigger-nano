@@ -17,7 +17,8 @@ public class EndpointsAsyncTaskTest {
 
         try {
             String joke = new EndpointsAsyncTask().execute(context).get();
-            assert (!joke.equals(null));
+            assert (joke!=null);
+            assert(!(joke.equals("fun and fun equal fun!!")));
         } catch (Exception e) {
             e.fillInStackTrace();
         }
