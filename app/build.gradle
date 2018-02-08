@@ -59,5 +59,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'org.mockito:mockito-core:2.7.22'
+    androidTestImplementation 'com.android.support.test:rules:1.0.1'
+    testCompile 'com.android.support.test:runner:1.0.1'
     testImplementation 'junit:junit:4.12'
 }

@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -19,11 +20,14 @@ import java.io.IOException;
  * Created by Harmoush on 2/6/2018.
  */
 
-public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
+public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
+    EndpointsAsyncTask(Context c) {
+        context=c;
+    }
     @Override
-    protected String doInBackground(Context... params) {
+    protected String doInBackground(Void... params) {
         if(myApiService == null) {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
@@ -36,7 +40,6 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
                     });
             myApiService = builder.build();
         }
-        context = params[0];
         try {
             String joke = myApiService.sendJoke().execute().getData();;
             return joke;
