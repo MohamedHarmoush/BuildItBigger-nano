@@ -28,7 +28,7 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //ToDo: complete this method.
-                new EndpointsAsyncTask().execute(getActivity());
+                new EndpointsAsyncTask(getActivity()).execute();
 
             }
         });
