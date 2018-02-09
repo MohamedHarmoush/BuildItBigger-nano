@@ -5,7 +5,7 @@ package com.udacity.gradle.builditbigger;
  */
 import android.content.Context;
 import android.support.test.filters.LargeTest;
-import android.support.test.filters.SmallTest;
+
 import android.support.test.runner.AndroidJUnit4;
 import android.test.mock.MockContext;
 import android.util.Log;
@@ -15,7 +15,7 @@ import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -41,8 +41,6 @@ public class EndpointsAsyncTaskTest {
         } catch (Exception e) {
             e.fillInStackTrace();
         }
-       // onView(withText("Hello world!")).check(matches(isDisplayed()));
-
     }
 
 }

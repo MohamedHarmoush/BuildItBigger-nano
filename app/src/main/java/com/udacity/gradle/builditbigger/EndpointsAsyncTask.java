@@ -40,10 +40,11 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
                     });
             myApiService = builder.build();
         }
+        // for test : -
+        // return "fun and fun equal fun!!";
         try {
-            String joke = myApiService.sendJoke().execute().getData();;
-            //return joke;
-            return "fun and fun equal fun!!";
+           String joke = myApiService.sendJoke().execute().getData();
+           return joke;
         } catch (IOException e) {
             return e.getMessage();
         }
